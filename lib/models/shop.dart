@@ -33,10 +33,12 @@ class Shop extends ChangeNotifier {
     for (int i = 0; i < quantity; i++) {
       _cart.add(foodItem);
     }
+    notifyListeners();
   }
 
   // remove from cart
   void removeFromCart(Food food) {
     _cart.remove(food);
+    notifyListeners();
   }
 }
